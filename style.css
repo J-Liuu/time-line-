@@ -17,7 +17,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  padding: 100px 0;
   /* Background color */
   background-color:black;
 }
@@ -61,8 +61,24 @@ html {
   line-height: 30px;
   font-weight: 300;
 }
-
+/* properties for date */
+.timeline-content .date{
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
 @media only screen and  (min-width: 768px){
+  /* Timeline Split LINE*/
+  .timeline::before{
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: gray;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .timeline ul li {
     width: 50%;
     margin-bottom: 50px;
@@ -73,9 +89,71 @@ html {
   .timeline ul li:nth-child(odd){
     float: left;
     clear: right;
+    /* moves odd childs a little bit to the left */
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+    
   }
   .timeline ul li:nth-child(even){
     float: right;
     clear: left;
+    /* moves even childs a little bit to the right*/
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
   }
+  .timeline ul li::after{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: gray;
+    border-radius: 50%;
+    top: 0;
+  }
+  /* Places bulletpoint on the timeline for odd childs */
+  .timeline ul li:nth-child(odd)::after{
+    /* Aligns the points with the timeline */    
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  /* Places bulletpoint on the timeline for even childs */
+  .timeline ul li:nth-child(even)::after{
+    /* Aligns the points with the timeline */
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  /* When hovering on the dots the color will change to aqua */
+  .timeline ul li:hover:after{
+    background-color: aqua;
+  }
+  /* adjusts where the date is placed */
+  .timeline-content .date{
+    position: absolute;
+    top: -30px;
+  }
+} 
+
+
+
+
+
+.AaA{
+  color:black; 
+  font-size:50px; 
+  text-align:center;
 }
+
+.aboutF{
+color:black;
+font-size:25px;
+}
+
+.group-photo {
+  height:auto;
+  width:350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
