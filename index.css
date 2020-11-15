@@ -1,5 +1,5 @@
 .banner-area{
-  background-image: url(https://images.unsplash.com/photo-1593022910074-3db767d47f80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80);
+  background-image: url(Lanterns1.jpg);
   background-position: center center;
   -webkit-background-size: cover;
   background-size: cover;
@@ -9,6 +9,10 @@ body {
   margin: 0;
   padding: 0;
 }
+.frame {
+  background-color: black;
+  padding:20px;
+}
 header{
   padding: 15px 60px;
 }
@@ -16,6 +20,7 @@ header{
   width: 42%;
   float: right;
   list-style: none;
+  background-color: rgba(255,255,255,.2);
 }
 .menu li{
   width: 100px;
@@ -25,27 +30,36 @@ header{
   color: #fff;
   font-size: 13px;
   float: left;
+  
+  
 }
 .menu li:hover{
-  background: lightcoral;
+  background: firebrick;
+  transition: .5s;
 }
 .menu li:hover a{
-  color: #000;
+  color: white;
+  transition: .5s;
 }
 .menu li a{
   text-decoration: none;
   font-family: baloo;
-  color: #fff; 
+  color: black; 
   text-transform: uppercase;
+  
 }
 .logo{
   text-decoration: none;
-  color: #fff;
+  color: black;
   font-size: 30px;
   font-family: big john;
-  padding: 20px 0;
+  margin-top: 20px;
+  padding: 10px;
   width: 20%;
   float: left;
+  font-weight: bold;
+  background-color: rgba(255,255,255,.2);
+
 }
 .banner-text{
   position: absolute;
@@ -54,10 +68,39 @@ header{
   transform: translate(-50%,-50%);
   color: #000;
   text-align: center;
+  background-color: rgba(255,255,255,.2);
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  padding: 20px;
 }
 .banner-text h2{
   font-family: baloo;
   margin: 0;
   font-size: 55px;
-  color: lightcoral;
+  color:  firebrick;
+  
+}
+.banner-text p {
+  font-size: 22px;
+  margin: 0;
+  font-family: poppins;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.banner-text a{
+  text-decoration: none;
+  border: 1px solid black;
+  font-size: 17px;
+  padding: 10px 35px;
+  color: black;
+  display: inline-block;
+  margin-top: 5%;
+  font-family: poppins;
+  text-transform: uppercase;
+}
+.banner-text a:hover{
+  border-color: firebrick;
+  background: firebrick;
+  transition: .5s;
+  color: white;
+
 }
